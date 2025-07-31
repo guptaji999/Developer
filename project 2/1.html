@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viridian Castles Co.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+
+    .container {
+      background-color: #a8562c;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      height: 100vh;
+      width: 100%;
+    }
+
+    .left {
+      color: #f4e8d3;
+    }
+
+    .left h1 {
+      margin-left: 20px;
+      padding: 20px;
+    }
+
+    .parra {
+      margin-top: 200px;
+      font-size: x-large;
+      font-family: 'Libre Baskerville', serif;
+      margin-left: 30px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      margin-left: 30px;
+      border: 1px solid wheat;
+      font-size: large;
+      font-weight: bold;
+      background-color: #a6603a;
+      color: wheat;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #efe3b8;
+      color: #a6603a;
+    }
+
+    .right {
+      display: flex;
+      width: 50%;
+    }
+
+    .right img {
+      width: 100%;
+      height: 78%;
+      object-fit: cover;
+    }
+
+    .container2 {
+      display: flex;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .left2 {
+      width: 50%;
+      height: 100%;
+    }
+
+    .left2 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .right2 {
+      width: 50%;
+      background-color: #f6e4b5;
+      color: #a6603a;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Georgia', serif;
+      padding: 40px;
+      text-align: left;
+    }
+
+    .right2 p {
+      font-size: 20px;
+      line-height: 1.7;
+    }
+
+    .container3 {
+      background-color: #a85b34;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .head h1 {
+      font-weight: bold;
+      color: #f4e8d3;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      font-family: 'Libre Baskerville', serif;
+    }
+
+    .picture {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      max-width: 280px;
+    }
+
+    .box img {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .box h3 {
+      color: #f4e8d3;
+      font-size: 1.2rem;
+      margin-top: 15px;
+      font-family: 'Libre Baskerville', serif;
+    }
+
+    .box h6 {
+      color: #f4e8d3;
+      font-size: 0.9rem;
+      font-weight: normal;
+      margin-top: 5px;
+      line-height: 1.4;
+      font-family: 'Libre Baskerville', serif;
+    }
+
+    .container4 {
+      background-color: #efe3b8;
+      display: flex;
+      padding: 60px;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .left4 {
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .left4 h1 {
+      color: #a6603a;
+      font-family: Georgia, serif;
+      font-size: 2em;
+      line-height: 1.4;
+    }
+
+    .right4 {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .news-card {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .news-card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .news-content h2 {
+      color: #a6603a;
+      font-family: Georgia, serif;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .news-content p {
+      color: #a6603a;
+      font-size: 0.95em;
+      line-height: 1.5;
+      font-family: 'Georgia', serif;
+    }
+
+    .container5 {
+      background: linear-gradient(to bottom, #e4d5c8, #a75526);
+      justify-content: space-between;
+      flex-wrap: wrap;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    .topic p1 {
+      color: #efe3b8;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      padding-top: 150px;
+      font-size: 35px;
+      text-align: center;
+    }
+
+    .topic p2 {
+      color: #efe3b8;
+      font-family: 'Raleway', sans-serif;
+      display: flex;
+      justify-content: center;
+      padding-top: 50px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .container6 {
+      font-family: 'Libre Baskerville', serif;
+      background-color: #f5e6b9;
+      color: #7b3e1d;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    .contact-header {
+      flex-basis: 100%;
+      text-align: left;
+      margin-left: 40px;
+    }
+
+    .contact-header .logo {
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #7b3e1d;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-header .title {
+      font-size: 2.5rem;
+      font-weight: normal;
+      color: #7b3e1d;
+    }
+
+    .contact-image img {
+      width: 350px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .contact-text {
+      max-width: 400px;
+    }
+
+    .contact-text h3 {
+      margin: 1.5rem 0 0.25rem;
+      color: #7b3e1d;
+    }
+
+    .contact-text p {
+      margin: 0;
+      font-size: 1rem;
+      color: #9c5c33;
+    }
+
+    @media (max-width: 768px) {
+      .container6 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .contact-image img {
+        width: 100%;
+        height: auto;
+      }
+
+      .contact-header {
+        text-align: center;
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">
+      <h1>VIRIDIAN <br>CASTLES CO.</h1>
+      <p class="parra">Organic products <br>made with love. <br>That's what you get <br>from us.</p>
+      <button class="btn">SHOP NOW</button>
+    </div>
+    <div class="right">
+      <img src="pic1.jpg" alt="Hero Image" />
+    </div>
+  </div>
+
+  <div class="container2">
+    <div class="left2">
+      <img src="pic2.jpg" alt="Brand Story Image" />
+    </div>
+    <div class="right2">
+      <p><strong>Our Brand Story</strong><br>
+        Viridian Castles Co. was founded by Cleo <br> Smith in 2015.
+        The company is <br> dedicated to producing high-quality<br>
+        organic products that you'll surely love.
+      </p>
+    </div>
+  </div>
+
+  <div class="container3">
+    <div class="head">
+      <h1>Organic Selection</h1>
+    </div>
+    <div class="picture">
+      <div class="box">
+        <img src="pic3.jpg" alt="Essential Oils" />
+        <h3>Essential Oils</h3>
+        <h6>Relax and unwind with our wide variety of essential oils</h6>
+      </div>
+      <div class="box">
+        <img src="pic4.jpg" alt="Organic Soaps" />
+        <h3>Organic Soaps</h3>
+        <h6>Keep your skin clean and healthy. Hypoallergenic & vegan.</h6>
+      </div>
+      <div class="box">
+        <img src="pic5.jpg" alt="Soy Candles" />
+        <h3>Soy Candles</h3>
+        <h6>Let our line of scented soy candles improve your mood.</h6>
+      </div>
+    </div>
+  </div>
+
+  <div class="container4">
+    <div class="left4">
+      <h1>Viridian Castle<br>in the News</h1>
+    </div>
+    <div class="right4">
+      <div class="news-card">
+        <img src="pic6.jpg" alt="Summer Promo" />
+        <div class="news-content">
+          <h2>Summer Promo</h2>
+          <p>News write-ups offer a great way to let clients know about new products and services, events, awards, and
+            more!</p>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="pic7.jpg" alt="VCC's New Branch" />
+        <div class="news-content">
+          <h2>VLCC's New Branch</h2>
+          <p>News write-ups offer a great way to let clients know about new products and services, events, awards, and
+            more!</p>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="pic8.jpg" alt="VCC's Green Award" />
+        <div class="news-content">
+          <h2>VLCC's Green Award</h2>
+          <p>News write-ups offer a great way to let clients know about new products and services, events, awards, and
+            more!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container5">
+    <div class="topic">
+      <p1>I'm the biggest user of our products. I won't <br> put anything harmful on my skin, so I can <br> assure you
+        that only the purest ingredients go <br>into Viridian Castle.</p1>
+      <p2>-Cleo Smith, CEO</p2>
+    </div>
+  </div>
+
+  <div class="container6">
+    <div class="contact-header">
+      <div class="logo">VIRIDIAN <br> CASTLE CO.</div>
+      <div class="title">Get in Touch</div>
+    </div>
+    <div class="contact-image">
+      <img src="pic9.jpg" alt="Contact Image" />
+    </div>
+    <div class="contact-text">
+      <h3>Mailing Address</h3>
+      <p>123 Anywhere St., Any City, State, Country 12345</p>
+      <h3>Email Address</h3>
+      <p>hello@reallygreatsite.com</p>
+      <h3>Phone Number</h3>
+      <p>(123) 456 7890</p>
+    </div>
+  </div>
+</body>
+
+</html>
