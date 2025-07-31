@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasper Technologies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #0d1333;
+            color: white;
+        }
+
+
+        .head {
+            position: relative;
+        }
+
+        .HI {
+            height: 700px;
+            display: block;
+        }
+
+        .header h1 {
+            font-size: 100px;
+            margin: 0;
+            padding-bottom: 15px;
+            color: yellowgreen;
+            position: absolute;
+            top: 30px;
+            left: 450px;
+        }
+
+        .header h1 span {
+            color: white;
+        }
+
+        .header p {
+            font-size: 20px;
+            color: white;
+            position: absolute;
+            top: 300px;
+            left: 450px;
+        }
+
+        .btn {
+            font-size: 20px;
+            padding: 15px 25px;
+            cursor: pointer;
+            position: absolute;
+            top: 370px;
+            left: 450px;
+            background-color: yellowgreen;
+            border: none;
+            color: black;
+            font-weight: bold;
+        }
+
+
+        .member img,
+        .services img {
+            width: 250px;
+            height: 250px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .team-grid,
+        .services-grid {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .team,
+        .services {
+            text-align: center;
+            margin: 80px 20px 0;
+        }
+
+        .team h2,
+        .services h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: white;
+            text-decoration: underline;
+            text-decoration-color: yellowgreen;
+        }
+
+        .member h3,
+        .service p {
+            margin-top: 10px;
+        }
+
+        .footer {
+            position: relative;
+            margin-top: 100px;
+            padding: 80px 40px;
+            background-color: #0d1333;
+            overflow: hidden;
+        }
+
+        .f1 {
+            z-index: 2;
+            position: relative;
+            max-width: 50%;
+            color: yellowgreen;
+        }
+
+        .f1 h2 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .f1 p {
+            font-size: 18px;
+            color: white;
+        }
+
+        .f1 a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .f2 img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: auto;
+            transform: scaleX(-1);
+            opacity: 0.9;
+            z-index: 1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="head">
+        <img class="HI" src="t.png" alt="Header Globe">
+        <div class="header">
+            <h1>We do <span><strong>IT</strong></span> <br>right.</h1>
+            <p>Jasper Technologies, IT Consultants</p>
+            <button class="btn">Book a Call</button>
+        </div>
+    </header>
+
+    <div class="team">
+        <h2>Meet the Team</h2>
+        <div class="team-grid">
+            <div class="member">
+                <img src="hello.jpg" alt="">
+                <h3>Vijay Balsawar</h3>
+                <p>Chief Operations Officer</p>
+            </div>
+            <div class="member">
+                <img src="hello.jpg" alt="">
+                <h3>Leela Balani</h3>
+                <p>Chief Executive Officer</p>
+            </div>
+            <div class="member">
+                <img src="hello.jpg" alt="">
+                <h3>Vinay Rajan</h3>
+                <p>Chief Technology Officer</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="services">
+        <h2>Services</h2>
+        <div class="services-grid">
+            <div class="service">
+                <img src="1.png" alt="">
+                <p>Cybersecurity</p>
+            </div>
+            <div class="service">
+                <img src="2.png" alt="">
+                <p>Risk Mitigation</p>
+            </div>
+            <div class="service">
+                <img src="3.png" alt="">
+                <p>IT Strategy Development</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="f1">
+            <h2>Whatever your <br> need, we can <br> solve <strong style="color: white;">IT</strong>.</h2>
+            <p>Book a consultation through <br>
+                <a href="mailto:hello@reallygreatsite.com">hello@reallygreatsite.com</a>
+            </p>
+        </div>
+        <div class="f2">
+            <img src="t.png" alt="Footer Globe">
+        </div>
+    </footer>
+
+</body>
+</html>
