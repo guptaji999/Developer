@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #2c1e4a;
+        }
+
+        .container h2 {
+            margin-left: 110px;
+            margin-top: -64px;
+            font-family: sans-serif;
+            color: white;
+            font-size: 20px;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .text h5 {
+            color: white;
+            margin-top: 150px;
+            font-size: 50px;
+            position: relative;
+            right: 130px;
+        }
+
+        .text p {
+            color: white;
+            padding: 30px;
+            margin-left: -10px;
+            position: relative;
+            right: 150px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .bubbles {
+            position: relative;
+            top: 130px;
+            left: 180px;
+        }
+
+        .bottom-line {
+            width: 80%;
+            height: 2px;
+            background-color: white;
+            margin: 40px auto;
+        }
+
+        .container2 {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .left h2 {
+            color: #ff38d0;
+            font-size: 30px;
+            margin-bottom: 40px;
+            margin-right: 180px;
+            padding-top: 30px;
+        }
+
+        .pic-img {
+            padding: 50px;
+            height: 400px;
+            width: 600px;
+            margin-right: 180px;
+        }
+
+        .topic p {
+            font-size: 30px;
+            margin-right: 90px;
+            font-weight: bold;
+            color: white;
+            font-family: sans-serif;
+            line-height: 1.8;
+        }
+
+        .container3 {
+            width: 100%;
+            padding: 50px 20px;
+        }
+
+        .services-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 20px;
+            text-align: start;
+        }
+
+        .services-section h1 {
+            font-size: 36px;
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-align: start;
+            margin-left: 180px;
+        }
+
+        .services-section p {
+            text-align: start;
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+            font-size: 20px;
+            line-height: 1.6;
+            color: white;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .card {
+            flex: 1 1 280px;
+            max-width: 300px;
+            height: 250px;
+            padding: 50px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        .card h2 {
+            color: #ff38d0;
+            font-size: 20px;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .card button {
+            background-color: #1e043b;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background-color: #340c5e;
+        }
+
+        .container4 {
+            max-width: 1200px;
+            margin: 80px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 20px;
+            gap: 60px;
+            flex-wrap: wrap;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .text-box {
+            flex: 1;
+            min-width: 300px;
+            border: 1px solid white;
+            padding: 40px;
+            margin-left: 40px;
+        }
+
+        .text-box h2 {
+            font-size: 32px;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+        }
+
+        .text-box p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .text-box button {
+            background-color: #ff38d0;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .text-box button:hover {
+            background-color: #ff66e5;
+        }
+
+        .circle-image-wrapper img {
+            width: 270px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            overflow-x: hidden;
+        }
+
+        .container5 {
+            max-width: 1200px;
+            margin: 80px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 20px;
+            gap: 60px;
+            flex-wrap: wrap;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .text-box2 {
+            max-width: 500px;
+            border: 1px solid #aaa;
+            padding: 50px;
+            box-sizing: border-box;
+            margin-left: 50px;
+        }
+
+        .text-box2 h1 {
+            padding-bottom: 20px;
+            font-family: 'orbitron', sans-serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .text-box2 p {
+            line-height: 1.6;
+            color: white;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            background: #ff3edb;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .text-box2 .btn:hover {
+            background-color: #ff66e5;
+        }
+
+        .image-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin-right: 80px;
+            border-radius: 50%;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container6 {
+            padding: 80px;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+
+        .container6 h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: white;
+            margin-left: 100px;
+            text-align: left;
+            font-size: 36px;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .project-grid {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
+            max-width: 500px;
+            text-align: left;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 5px;
+        }
+
+        .project-card p {
+            margin-top: 10px;
+            color: #e0e0e0;
+        }
+
+        .container7 {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .testimonial-left {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .testimonial-left h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 36px;
+            color: white;
+            line-height: 1.4;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-icon img {
+            width: 450px;
+            height: 400px;
+        }
+
+        .testimonial-right {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            min-width: 300px;
+        }
+
+        .testimonial-box {
+            border: 1px solid white;
+            padding: 20px;
+        }
+
+        .testimonial-box p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .company-name {
+            color: #ff38d0;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .container8 {
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .contact-left {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-left h1 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        .contact-left h3 {
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin-top: 30px;
+            margin-bottom: 5px;
+        }
+
+        .contact-left p {
+            font-size: 16px;
+        }
+
+        .social-box {
+            border: 1px solid white;
+            padding: 20px 30px;
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            max-width: 300px;
+
+        }
+
+        .social-box span {
+            font-weight: bold;
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+
+        .social-icons {
+            margin-left: auto;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: #ffffff;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 5px;
+        }
+
+        .social-icons a:hover {
+            background-color: #ff38d0;
+        }
+
+        .contact-right {
+            flex: 1;
+            min-width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="photo">
+            <img src="1.png" alt="">
+            <h2>HARPERS INC.</h2>
+        </div>
+
+
+        <div class="text">
+            <h5>ALWAYS <br> READY <br> TO MAKE <br> YOUR LIFE <br>BETTER</h5>
+            <p>Every step of the way</p>
+        </div>
+
+        <div class="photo">
+            <img class="bubbles" src="2.png" alt="">
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="left">
+            <h2>YOU CAN COUNT ON US</h2>
+            <img class="pic-img" src="3.png" alt="">
+        </div>
+
+        <div class="topic">
+            <p>This text block gives a brief <br> overview of your company. <br> Share your philosophy, <br> vision, or
+                mantra here.</p>
+        </div>
+    </div>
+
+    <div class="bottom-line"></div>
+
+    <div class="container3">
+
+        <div class="services-section">
+            <h1><strong>SERVICES WE PROVIDE</strong></h1>
+            <p>Share your services or product offerings here. Present them as simple headers that can lead out to <br>
+                their
+                pages where you can expound on them further. You can also use this space for other purposes <br> where
+                the
+                information is best presented as mere teasers to other individualized pages.</p>
+
+
+            <div class="card-container">
+                <div class="card">
+                    <h2>SECURE <br> DATA</h2>
+                    <button>Learn More</button>
+                </div>
+                <div class="card">
+                    <h2>24/7 <br> SUPPORT</h2>
+                    <button>Learn More</button>
+                </div>
+                <div class="card">
+                    <h2>CUSTOMIZED <br>SOLUTIONS</h2>
+                    <button>Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container4">
+        <div class="text-box">
+            <h2>100% SECURED <br> DATA</h2>
+            <p>
+                Highlight specific services or products that are unique <br> to your business here. It can be your
+                flagship product, <br> or a service that you've ploneered. Give It room to <br> shlne here.
+            </p>
+            <button>Learn More </button>
+        </div>
+        <div class="circle-image-wraper">
+            <img src="4.png" alt="">
+        </div>
+    </div>
+
+    <div class="container5">
+        <div class="text-box2">
+            <h1>24/7 CUSTOMER SUPPORT</h1>
+            <p>
+                Highlight specific services or products that are unique <br> to your business here. It can be your
+                flagship product, <br> or a service that you've ploneered. Give It room to <br> shlne here.
+            </p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+
+        <div class="image-container">
+            <img src="5.png" alt="">
+        </div>
+    </div>
+    <div class="bottom-line"></div>
+
+    <div class="container6">
+        <h2>SOME OF OUR SAMPLE <br> PROJECTS</h2>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="6.png" alt="">
+                <p>Give a short description of your project. Share the <br> impact it made.</p>
+            </div>
+            <div class="project-card">
+                <img src="7.png" alt="">
+                <p>Give a short description of your project. Share the <br> impact it made.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container7">
+        <div class="testimonial-left">
+            <h2>COMPANIES <br> WE'VE <br> WORKED WITH</h2>
+            <div class="testimonial-icon">
+                <img src="8.png" alt="">
+            </div>
+        </div>
+        <div class="testimonial-right">
+            <div class="testimonial-box">
+                <p>
+                    Boost your product and service's credibility by adding testimonials from <br>
+                    your clients. People love recommendations so feedback from others <br> who've
+                    tried it is invaluable.
+                </p>
+                <p class="company-name">- Hollis & Reed</p>
+            </div>
+            <div class="testimonial-box">
+                <p>
+                    Boost your product and service's credibility by adding testimonials from <br>
+                    your clients.<br><br>
+                    People love recommendations so feedback from others who've tried it is <br>
+                    invaluable.
+                </p>
+                <p class="company-name">- Hillstreet Industries</p>
+            </div>
+            <div class="testimonial-box">
+                <p>
+                    Boost your product and service's credibility by adding testimonials from <br>
+                    your clients. People love recommendations so feedback from others <br> who've
+                    tried it is invaluable.
+                </p>
+                <p class="company-name">- Studio Rallia</p>
+            </div>
+        </div>
+    </div>
+    <div class="container8">
+        <div class="contact-left">
+            <h1>Let's talk business</h1>
+            <h3>PHONE</h3>
+            <p>(123) 456-7890</p>
+            <h3>EMAIL</h3>
+            <p>hello@reallygreatsite.com</p>
+
+            <div class="social-box">
+                <span>SOCIAL</span>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/sharvan_gupta_999/?hl=en"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/sharvan_gupta_999/?hl=en"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="contact-right">
+            <img src="9.png" alt="">
+        </div>
+    </div>
+
+
+    <div class="bottom-line"></div>
+</body>
+
+</html>
