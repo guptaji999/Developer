@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact list</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            background-color: #e6e6e6;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            width: 300px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .header {
+            padding: 10px;
+            font-weight: bold;
+            color: gray;
+            background: white;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            padding: 20px 20px;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .search-input-box {
+            display: flex;
+            align-items: center;
+            background: #f2f4f3;
+            flex: 1;
+            padding: 5px 10px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .search-input-box i {
+            font-size: 14px;
+            color: #8a8a8a;
+            cursor: pointer;
+        }
+
+        .search-input-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 14px;
+            padding-left: 8px;
+            cursor: pointer;
+        }
+
+        .menu-icon {
+            font-size: 16px;
+            color: gray;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 15px;
+            border-top: 3px solid rgb(209, 209, 209);
+            border-bottom: 1px solid #ddd;
+            background: #fff;
+            cursor: pointer;
+        }
+
+        .profile-text {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .profile-section i {
+            color: gray;
+        }
+
+        .favourites-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 15px;
+            border-top: 3px solid rgb(209, 209, 209);
+            background: #fff;
+            cursor: pointer;
+        }
+
+        .favourites-text {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .contacts-section {
+            background: #fff;
+            display: grid;
+            grid-template-columns: 50px auto 40px;
+            align-items: center;
+        }
+
+        .contact-pic {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 8px auto;
+            margin-left: 50px;
+        }
+
+        .contact-info {
+            font-size: 15px;
+            color: #333;
+            padding: 8px 0;
+            text-align: left;
+            margin-left: 50px;
+
+        }
+
+        .btn {
+            border: none;
+            background: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .abs {
+            position: absolute;
+            top: 300px;
+            left: -30px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .ab {
+            position: absolute;
+            bottom: 20px;
+            left: -30px;
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">Contact list</div>
+
+        <div class="search-bar">
+            <div class="search-input-box">
+                <i style="color: green;" class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search contacts">
+                <i style="color: green;" class="fa-solid fa-microphone"></i>
+            </div>
+            <i style="margin-left: 30px;" class="fa-solid fa-ellipsis-vertical menu-icon"></i>
+        </div>
+
+        <div class="profile-section">
+            <div class="profile-text">My profile</div>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+
+        <div class="favourites-section">
+            <div class="favourites-text">My favourites</div>
+        </div>
+
+        <div class="contacts-section">
+            <img src="sharvan.jpg" alt="" class="contact-pic">
+            <div class="contact-info">Addai</div>
+            <div></div>
+
+            <img src="sharvan.jpg" alt="" class="contact-pic">
+            <div class="contact-info">Boampong</div>
+            <div></div>
+
+            <img src="sharvan.jpg" alt="" class="contact-pic">
+            <div class="contact-info">Akua</div>
+            <div></div>
+
+            <img src="sharvan.jpg" alt="" class="contact-pic">
+            <div class="contact-info">Addai</div>
+            <div></div>
+
+            <img src="sharvan.jpg" alt="" class="contact-pic">
+            <div class="contact-info">Adiza Salifu</div>
+            <div></div>
+
+            <img src="sharvan.jpg" alt="" class="contact-pic">
+            <div class="contact-info">Akua</div>
+            <div></div>
+
+            <img src="sharvan.jpg" alt="" class="contact-pic">
+            <div class="contact-info">Amponsah</div>
+            <div></div>
+
+            <img src="sharvan.jpg" alt="" class="contact-pic">
+            <div class="contact-info">Bisa K Dei</div>
+            <div></div>
+
+            <img src="sharvan.jpg" alt="" class="contact-pic">
+            <div class="contact-info">Boampong</div>
+            <button class="btn">
+                <a href="2.html"><i class="fa-solid fa-user-plus"
+                        style="font-size: 30px; margin-right: 30px; color: green;"></i></a>
+            </button>
+
+            <img src="sharvan.jpg" alt="" class="contact-pic">
+            <div class="contact-info">Buabeng</div>
+            <div></div>
+        </div>
+
+        <div class="abs">A</div>
+        <div class="ab">B</div>
+
+    </div>
+</body>
+
+</html>

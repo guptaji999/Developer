@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create new Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700;400&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 30px 15px;
+            background-color: #f1f1f1;
+            font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .phone {
+            width: 360px;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 8px 24px rgba(17, 17, 17, 0.08);
+            position: relative;
+        }
+
+        .top-row {
+            background-color: #f4f4f4;
+            color: #aaa;
+            font-size: 14px;
+            padding: 8px 14px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 14px;
+            border-bottom: 1px solid #eee;
+            background-color: #ffffff;
+        }
+
+        .header .left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #6ea055;
+        }
+
+        .header .save {
+            color: #9fc785;
+            font-weight: 600;
+        }
+
+        .hero {
+            background-color: #9fc785;
+            height: 180px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .avatar-wrap {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .camera-btn {
+            position: absolute;
+            right: 20px;
+            bottom: 22px;
+            width: 44px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.95);
+            display: flex;
+            border-radius: 8px;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+            border: 2px solid rgba(255, 255, 255, 0.85);
+            cursor: pointer;
+        }
+
+        .camera-btn i {
+            color: #6ea055;
+            font-size: 20px;
+        }
+
+        .save-pill {
+            width: calc(100% - 36px);
+            margin: 0 auto;
+            transform: translateY(-28px);
+            background-color: #ffffff;
+            padding: 10px 10px;
+            border-radius: 12px;
+            box-shadow: 0 10px 10px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .save-left {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            border: none;
+        }
+
+        .save-icon {
+            width: 36px;
+            height: 36px;
+            background-color: linear-gradient(180deg, #eaf6e7, #dff0da);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6ea055;
+            font-weight: 700;
+            font-size: 16px;
+            border: none;
+        }
+
+        .save-text {
+            font-size: 13px;
+            color: #666;
+            line-height: 1;
+            border: none;
+        }
+
+        .save-text .small {
+            display: block;
+            font-size: 12px;
+            color: #9aa295;
+            margin-top: 4px;
+            border: none;
+        }
+
+        .fields-card {
+            margin: 12px 16px 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 10px 20px;
+            border: none;
+        }
+
+        .field {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            padding: 8px 0;
+            position: relative;
+            border: none;
+        }
+
+        .field .icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background-color: linear-gradient(180deg, rgba(159, 199, 133, 0.12), rgba(159, 199, 133, 0.06));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6ea055;
+            font-size: 16px;
+            border: none;
+        }
+
+        .field .input-wrap {
+            flex: 1;
+            border: none;
+        }
+
+        .field input::placeholder {
+            color: rgba(109, 146, 106, 0.6);
+        }
+
+        .field:after {
+            content: "";
+            position: absolute;
+            left: 56px;
+            bottom: 0;
+            right: 12px;
+            height: 1px;
+            background-color: rgba(159, 199, 133, 0.25);
+        }
+
+        .field .caret {
+            color: #9aa295;
+            font-size: 12px;
+            margin-left: 8px;
+        }
+
+        .more-fields {
+            text-align: center;
+            color: #9fc785;
+            padding: 18px 0;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+
+    
+        input {
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 14px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="phone">
+
+        <div class="top-row">new contact</div>
+
+        <div class="header">
+           <a style="text-decoration: none;" href="1.html"><div class="left"><i class="fa-solid fa-chevron-left" style="color: rgb(148, 231, 24);"></i></div></a>
+            <div class="tittle">Create new contact</div>
+            <div style="color: rgb(148, 231, 24);" class="save">save</div>
+        </div>
+
+        <div class="hero">
+            <div class="avatar-wrap" aria-hidden="true">
+                
+                <svg width="110" height="110" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    
+                    <circle cx="60" cy="36" r="20" fill="none" stroke="#fff" stroke-width="6" />
+    
+                    <path d="M30 92 C30 72 90 72 90 92 L90 98 L30 98 Z" fill="none" stroke="#fff" stroke-width="6"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+
+            <button class="camera-btn">
+                <i class="fa-solid fa-camera"></i>
+            </button>
+        </div>
+
+        <div class="save-pill">
+            <div class="save-left">
+                <div class="save-icon"><i class="fa-solid fa-sim-card" style="color: rgb(148, 231, 24);"></i></div>
+                <div class="save-text">
+                    <strong>saving to</strong>
+                    <span class="small">MTB GH</span>
+                </div>
+            </div>
+            <div><i class="fa-solid fa-caret-down" style="color: #6ea055;"></i></div>
+        </div>
+
+        <div class="fields-card">
+            <div class="field">
+                <div class="icon"><i class="fa-regular fa-user"></i></div>
+                <div class="input-wrap">
+                    <input type="text" placeholder="Enter your First name" maxlength="20">
+                    <input type="text" placeholder="Last name" maxlength="15"
+                        style="margin-top: 6px; font-size: 14px; display: block;">
+                </div>
+                <div class="caret"><i class="fa-solid fa-caret-down" style="color: #6ea055;"></i></div>
+            </div>
+
+            <div class="field">
+                <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="input-wrap">
+                    <input type="tel" placeholder="Phone" maxlength="10">
+                </div>
+                <div class="caret"><i class="fa-solid fa-caret-down" style="color: #6ea055;"></i></div>
+            </div>
+
+            <div class="field">
+                <div class="icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                <div class="input-wrap">
+                    <input type="tel" placeholder="Mobile" maxlength="10">
+                </div>
+                <div class="caret"><i class="fa-solid fa-caret-down" style="color: #6ea055;"></i></div>
+            </div>
+            <div class="field">
+                <div class="icon"><i class="fa-regular fa-envelope"></i></div>
+                <div class="input-wrap">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="caret"><i class="fa-solid fa-caret-down" style="color: #6ea055;"></i></div>
+            </div>
+
+            <div class="field">
+                <div class="icon"><i class="fa-solid fa-house"></i></div>
+                <div class="input-wrap">
+                    <input type="text" placeholder="Home">
+                </div>
+                <div class="caret"><i class="fa-solid fa-caret-down" style="color: #6ea055;"></i></div>
+            </div>
+        </div>
+        <div class="more-fields">More fields</div>
+    </div>
+</body>
+</html>
